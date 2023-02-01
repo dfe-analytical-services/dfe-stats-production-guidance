@@ -1,6 +1,17 @@
-<h2>{{ site.data.navlist.docs_list_title }}</h2>
-<ul>
-   {% for item in site.data.navlist.docs %}
-      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-   {% endfor %}
-</ul>
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    <h2>{{ site.data.navlist.docs_list_title }}</h2>
+    <ul>
+       {% for item in site.data.navlist.docs %}
+          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+       {% endfor %}
+    </ul>
+    {{ content }}
+  </body>
+</html>
