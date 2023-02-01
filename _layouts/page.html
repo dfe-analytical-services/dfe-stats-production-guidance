@@ -1,0 +1,12 @@
+---
+layout: default
+---
+    <div class="sidenav">
+      {% for item in site.data.navlist.docs %}
+         <a href="{{ item.url }}">{{ item.title }}</a>
+      {% endfor %}
+    </div>
+
+    <main id="content">
+    {{ content }}
+  </main>
